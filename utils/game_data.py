@@ -256,7 +256,7 @@ def pair_images(x):
 
 
 RANDOM_TF = transforms.Compose([
-    transforms.RandomAffine(10.0, translate=(0.1, 0.1), scale=(0.95, 1.01), shear=1, fillcolor=None),
+    transforms.RandomAffine(10.0, translate=(0.1, 0.1), scale=(0.95, 1.01), shear=1),
     transforms.Lambda(lambda x: x * (1 + (torch.rand_like(x) - 0.5) / 10))
 ])
 
